@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Musical World</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <video src="video.mp4" type="video/mp4" class="video-clip" autoplay muted loop plays-inline></video>
+            <nav class="navbar">
+                <img src="logo2.png" alt="error" class="logo">
+                <ul>
+                    <li><a href="index.html" class="items active">HOME</a></li>
+                    <li><a href="music.html" class="items">MUSIC</a></li>
+                    <li><a href="about.html" class="items">ABOUT US</a></li>
+                    <li><a href="https://www.youtube.com/@musicalworld9912" class="items">CHANNEL</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="right-col">
+                    <P>Play The Music</P>
+                    <img src="mute (3).png" alt="mute" id="mute">
+                </div>
+            </div>
+            <audio id="mysong">
+                <source src="songs/BGM/Evening Revelry DJ music.mp3" alt="song" type="audio/mp3"/> 
+            </audio>
+        </div>
+
+<script>
+
+    var mysong = document.getElementById("mysong");
+    var mute = document.getElementById("mute");
+
+    mute.onclick = function() {
+        if (mysong.paused) {
+            mysong.play();
+            mute.src = "volume.png";
+        }else{
+            mysong.pause();
+            mute.src = "mute (3).png";
+        }
+    }
+
+</script>
+
+    </body>
+</html>
